@@ -11,5 +11,9 @@
 }
 
 #container>div {
-    border: 1px solid black;
+    border: 0;
+}
+
+button {
+    margin-bottom: 10px;
 }
