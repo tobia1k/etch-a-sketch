@@ -7,9 +7,17 @@ button.addEventListener('click', () => {
     let newSize = null;
     do {
         newSize = prompt("How many squares do you want on each side?");
-    } while (newSize > 100 || !newSize);
-    deleteGrid();
-    createGrid(newSize);
+        if (newSize && newSize <= 100 && newSize > 0) {
+            deleteGrid();
+            createGrid(newSize);
+        }
+        else if (!newSize) {
+            break;
+        }
+        else {
+            alert("Invalid input. Try again.");
+        }
+    } while (!(newSize <= 100 && newSize > 0));
 })
 
 createGrid(16);
